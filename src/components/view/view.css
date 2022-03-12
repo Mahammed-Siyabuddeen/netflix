@@ -1,0 +1,113 @@
+.view-container{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    
+
+}
+.view{
+    background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8));
+    margin-top: 80px;
+    height: auto;
+    width: 1200px;
+    position: absolute;
+    
+    top: 0;
+}
+.view-tittle{
+    margin-left: 60px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.view-img{
+    height: 570px;
+}
+.row{
+    display: flex;
+    color: #fff;
+
+    /* flex-wrap: wrap; */
+}
+.over-view{
+    padding: 10px;
+}
+.over-view h1{
+    padding: 3px;
+}
+.view-decription{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-top: 0;
+    display: block;
+}
+.cast-img{
+    margin: 20px;
+}
+.cast-img p{
+    padding-left: 25px;
+}
+.view-buttons{
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+}
+.view-button{
+    border-radius: 2px;
+    font-size: .9rem;
+    padding: 9px 11px;
+    margin-bottom: 20px;
+    background-color: rgba(51,51,51,.4);
+    border: none;
+    font-weight: 400;
+    margin-right: 30px;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    color: #fff;
+    width: 150px;
+    cursor: pointer;
+}
+.view-button:hover{
+    background-color: hsla(0,0%,100%,.2);
+}
+.price{
+    color: #EEB64D;
+    font-size: inherit;
+}
+
+/******************************************/
+.item-page__bg{
+    min-height: 100%;
+    min-width: 1024px;
+    -webkit-filter: blur(1.3px) brightness(60%);
+    filter: blur(1.3px) brightness(60%);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+/***************************media query****************************/
+@media only screen and (max-width:600px) {
+    .view{
+      width: 300px;
+    }
+    .row{flex-wrap: wrap;}
+    .cast-img{
+        margin: 2px;
+    }
+    .cast-img p{
+        padding-left: 0px;
+    }
+    .view-img{
+        height: auto;
+    }
+
+}

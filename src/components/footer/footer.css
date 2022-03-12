@@ -1,0 +1,17 @@
+.footer_container{
+    width: 100%;
+    color: #fff;
+    align-items: center;
+
+}
+.footer_container p{
+    margin: 30px;
+    margin-left: 40%;
+    /* align-items: center; */
+}
+@media only screen and (max-width:800px) {
+    
+    .footer_container p{
+        margin-left: 30%;
+    }
+}
