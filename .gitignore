@@ -4,7 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/build
+/y
+/assets.md 
+/firebase.json 
+/ui-debug.log 
 # testing
 /coverage
 
