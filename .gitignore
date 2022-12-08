@@ -5,10 +5,10 @@
 /.pnp
 .pnp.js
 /build
-/y
+./y
 /assets.md 
 /firebase.json 
-/ui-debug.log 
+ui-debug.log 
 # testing
 /coverage
 
