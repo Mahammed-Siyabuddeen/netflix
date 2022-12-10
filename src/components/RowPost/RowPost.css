@@ -1,4 +1,4 @@
-.row{
+.row-poster-main{
     margin-left: 20px;
     color: #fff;
 }
@@ -18,8 +18,35 @@
     margin-right: 10px;
 }
 
+
 .smallPoster{
     max-width: 150px;
     margin-right: 10px;
 }
+
+.row-post-img-container{
+    position: relative;
+    align-items: center;
+    color: #fff;
+    transition: all .2s ease-in-out;
+
+    
+}
+.row-post-img-container:hover{
+    position: relative;
+    transform: scale(1.2);
+    right: 30px;
+    transform-origin: center
+}
+.row-post-img-contents{
+    position: absolute;
+    top: 30px;
+}
+.row-post-overview{
+    font-size: 11px;
+    padding: 10px;
+    
+
+}
+
 

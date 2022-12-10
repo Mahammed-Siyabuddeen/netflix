@@ -1,0 +1,38 @@
+.payment_section{
+    padding: 20px;
+    margin: 0 20px;
+    border-bottom: 1px solid lightgrey;
+  
+}
+.payment_container{
+    text-align: center;
+    margin: 10px;
+    font-weight: 400;
+    margin-left: 10%;
+    max-width: 1000px;
+} 
+
+.payament_details{
+    margin-top: 90px;
+     font-size: 20px;
+}
+.payment_title{
+    color: #fff;
+
+}
+.payment_form{
+    padding: 20px;
+    background-color: lightseagreen;
+    border-radius: 20px;
+    margin: 5px;
+
+}
+.payment_tittle{
+    padding: 20px;
+    background-color: lightseagreen;
+    border-radius: 20px;
+
+}
+
+
+

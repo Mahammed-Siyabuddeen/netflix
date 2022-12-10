@@ -1,13 +1,15 @@
 
 .navbar{
-    position: fixed;
-    top: 0;
+    height: 80px;
     width: 100%;
-    height: 30px;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
-    background-color: #111;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    z-index: 40;
 }
 
 .logo{
@@ -19,4 +21,121 @@
     position: fixed;
     right: 20px;
     width: 30px;
+}
+
+nav{
+    flex: 1;
+    width: 200px;
+    text-align: left;
+    color: #fff;
+    margin-left: 20%;
+    transition: 0.5s;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.row-container{
+    display: flex;
+}
+.header-searchbar{
+    position: fixed;
+    left: 60%;
+    top: 3px;
+}
+.searchbar-container1{
+    margin-left: auto;
+    margin-right: 15px;
+}
+.seacrhbar-container2{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    margin-top: 2px;
+}
+.header-searchicon{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-left: 11px;
+    margin-top: 11px;
+    z-index: 1;
+    color: #e5e5e5;
+}
+.seacrhbar-container2 input#search{
+    height: 40px;
+    background: #141414;
+    border: none;
+    font-size: 14px;
+    float: left;
+    color: #262626;
+    padding-left: 35px;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    width: 300px;
+    background: #000;
+    -webkit-transition: width .55s ease;
+    transition: width .55s ease;
+}
+.name{
+
+    position:absolute;
+    right:55px;
+    margin-right:10px;
+    top: 5px;
+    color:#fff;
+}
+.menu{
+    display: none;
+}
+@media only screen and (max-width:800px){
+    nav ul{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 60px;
+        background-color: #333;
+        /* max-height: 0px;
+        overflow: hidden; */
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .header-searchbar{
+        left: 25%;
+        top: -10px;
+    }
+    .seacrhbar-container2{
+        width: 180px;
+    }
+    .seacrhbar-container2 input#search{
+        width: 200px;
+    }
+    .name{
+    position: relative;
+    right:0;
+    color:#fff;
+    } 
+    .avatar{
+        right: 50px;
+    }
+    .menu{
+        display: block;
+        position: fixed;
+        right: 10px;
+
+    }
+    .avatar{
+        display: none;
+    }
+
 }
