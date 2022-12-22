@@ -15,18 +15,27 @@ import './App.css'
 import './components/Banner/Banner.css';
 import './components/NavBar/NavBar.css';
 import './components/RowPost/RowPost.css';
+import { loadStripe } from '@stripe/stripe-js';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { action, originals, popular } from './Services/urls';
+import { Elements } from '@stripe/react-stripe-js';
+import { useEffect } from 'react';
+import { auth } from './Firebase/Config';
+import { useDispatch, useSelector } from 'react-redux';
+import { setcurrentuser } from './Redux/User/User-action';
 
 function App() {
-  const promise = loadStripe("pk_test_51K8OhASItmU7WYKckffrzhBlepcBj2Z04p1JDSy3z4xxvpmm4aRKz8qxkauvlQsF8WbD28xLN6hM8mRAYKOtELTK00fA3WSyXT")
+  const promise = loadStripe("pk_test_51MDnf1SGSXt8TKLFrdHWnrbXgb7JtHgCqNuSEMhJKfgZhPfGHC2VhGnieDRGCXKn5mhzCnJgNodB9a2ykkmlbTcE00Jdxu8OG1")
+  const dispatch=useDispatch()
+  var user=useSelector((state)=>(state.user.user))
 
-  // auth.onAuthStateChanged(user => {
-  //   Dispatch(setcurrentuser(user ? user.displayName : user))
-  // })
+  useEffect(()=>{
+    auth.onAuthStateChanged((user)=>{
+      dispatch(setcurrentuser(user))
+    })
+  },[user])
   return (
     <div>
-      {/* <Banner />
-      <RowPost1 url={action} title='action' isredux /> */}
-
       <BrowserRouter>
         <NavBar />
         <Routes>

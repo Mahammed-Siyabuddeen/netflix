@@ -1,4 +1,4 @@
-import {  onAuthStateChanged, signOut } from 'firebase/auth'
+import {  signOut } from 'firebase/auth'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
@@ -6,7 +6,6 @@ import {  useNavigate } from 'react-router'
 import { useLocation } from 'react-router-dom'
 import { auth } from '../../Firebase/Config'
 import { getsearchData } from '../../Redux/Search/Search-action'
-import { logoutcurrentuser, setcurrentuser } from '../../Redux/User/User-action'
 import Signt from '../Signout/Signout'
 function NavBar() {
    const Navigate=useNavigate()
@@ -14,32 +13,22 @@ function NavBar() {
    const [show, setshow] = useState(false)
    const [currentroute, setcurrentroute] = useState('/')
   const  Dispatch=useDispatch()
-//   Dispatch(getmoviedata())
 useEffect(()=>{
-    auth.onAuthStateChanged(user => {
-        console.log('changing') 
-        Dispatch(setcurrentuser(user))
-    })
     if(window.innerWidth>800)
     setshow(true)
 },)
-var username=useSelector((state)=>(state.user.user))
-  var user=null
-console.log(username)
+
+var username=useSelector(({user})=>(user.user))
 const [popus, setpopus] = useState(false)
 var Logout=async()=>{
    await signOut(auth).then(()=>{
-    Dispatch(logoutcurrentuser())
-    Navigate('/login')
-    setpopus(!popus)
-    setshow(!show)
+    // Dispatch(logoutcurrentuser())
+    window.location.href='/'
 
    })
 }
 const handlecick=()=>{
     setshow(!show)
-    
-//    alert(window.innerWidth)
 }
 const handlechange=(event)=>{
  const   {value}=event.target

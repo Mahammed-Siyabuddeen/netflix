@@ -2,19 +2,23 @@
     padding: 20px;
     margin: 0 20px;
     border-bottom: 1px solid lightgrey;
+    color: #fff;
   
 }
 .payment_container{
     text-align: center;
     margin: 10px;
     font-weight: 400;
-    margin-left: 10%;
+    margin-left:auto;
+    margin-right: auto;
     max-width: 1000px;
+    /* width: auto; */
 } 
 
 .payament_details{
     margin-top: 90px;
      font-size: 20px;
+     background-color: #000;
 }
 .payment_title{
     color: #fff;
@@ -22,16 +26,27 @@
 }
 .payment_form{
     padding: 20px;
-    background-color: lightseagreen;
-    border-radius: 20px;
+    /* background-color: lightseagreen; */
+    /* border-radius: 20px; */
     margin: 5px;
 
 }
 .payment_tittle{
     padding: 20px;
-    background-color: lightseagreen;
-    border-radius: 20px;
+    /* background-color: lightseagreen; */
+    /* border-radius: 20px; */
 
+}
+.payment_price_container  button{
+    background-color: #111;
+    height: 50px;
+    color: #fff;
+    font-size: large;
+    width: 120px;
+    border: none;
+    margin: 30px auto;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 

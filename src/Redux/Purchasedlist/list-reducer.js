@@ -9,7 +9,7 @@ export const PurchasedReducer=(state=InitialState,action)=>{
     const {payload,type}=action
     switch(type){
         case  PurchaseActions.GET_PURCHASE_LIST:
-            return{list:payload}
+            return{...state,list:payload}
         default :return state   
         
     }

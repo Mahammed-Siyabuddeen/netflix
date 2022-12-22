@@ -43,7 +43,7 @@ function View() {
     // movie price calcuating part //
     const rate = vote_average * 10 + 20;
     const gst = rate * (18 / 100);
-    const price = rate + gst
+    const price =Math.round( rate + gst )
 
 
     const Addmylist = async () => {

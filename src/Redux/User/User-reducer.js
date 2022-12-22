@@ -1,13 +1,15 @@
 import UserActionTypes from "./User-type"
+import {auth} from '../../Firebase/Config'
 const Initialstate={
-    user:[]
+    user:null,
+
 }
 export const Userreducer=(state=Initialstate,action)=>{
     const {type,payload}=action
     switch(type)
     {
         case UserActionTypes.SET_CURRENT_USER:
-            return{user:payload}
+            return{...state,user:payload}
         case UserActionTypes.LOGOUT_CURRENT_USER:
             return{   }
             

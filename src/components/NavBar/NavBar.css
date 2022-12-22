@@ -16,6 +16,7 @@
    position: fixed;
    left: 20px;
    width: 80px; 
+   cursor: pointer;
 }
 .avatar{
     position: fixed;

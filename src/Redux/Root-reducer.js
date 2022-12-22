@@ -5,8 +5,8 @@ import { PurchasedReducer } from "./Purchasedlist/list-reducer";
 import { SearchReducer } from "./Search/Search-reducer";
 import { Userreducer } from "./User/User-reducer";
 const Reducer=combineReducers({
-    user:Userreducer,
     movie:MovieReducer,
+    user:Userreducer,
     list:listreducer,
     purchaselist:PurchasedReducer,
     searchlist:SearchReducer

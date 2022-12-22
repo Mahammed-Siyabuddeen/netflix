@@ -7,3 +7,6 @@ body{
 background-color: #111;
 }
 
+li, a{
+  cursor: pointer;
+}

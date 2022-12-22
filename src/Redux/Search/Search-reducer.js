@@ -9,7 +9,7 @@ export const SearchReducer=(state=InitialState,action)=>{
     switch(type)
     {
         case SearchActions.SET_SEARCH_DATA:
-            return {list:payload}
+            return {...state,list:payload}
 
         default :return state    
     }

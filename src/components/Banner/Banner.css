@@ -3,7 +3,9 @@
     height: 448px;
     color: white;
 }
-
+.banner:hover{
+    cursor: pointer;
+}
 .content{
     padding-top: 140px;
     height: 190px;

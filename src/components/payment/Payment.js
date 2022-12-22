@@ -23,13 +23,19 @@ function Payment() {
  const user=useSelector((state)=>state.user)
 
   console.log("component mount ")
+  console.log(" location: ",location.state ,"  ",location.state.price)
   console.log(user)
   useEffect(() => {
     const getClientSecret = async () => {
+      console.log("inside get cllinet secret key");
+      const paymentUrl='https://netflix-orwf.onrender.com'
       const response = await axios({
         method: 'post',
-        url: `https://ntlflix.herokuapp.com/payments/create?total=${location.state?location.state.price*100:10}`
+        url: `${paymentUrl}/payments/create`,
+        data:{total:location.state?location.state.price*100:10}
       });
+      console.log('out side get client secret ');
+      console.log(response);
       setclientSecret(response.data.clientSecret)
 
     }
@@ -56,6 +62,7 @@ function Payment() {
       }
       
     }).then(({paymentIntent})=>{
+      console.log(paymentIntent);
      dispatch(addtoPlaymovie({movieid:location.state.movieid,id:paymentIntent.id,uid:user.user.uid}))
       setsucceeded(true)
       seterror(null)

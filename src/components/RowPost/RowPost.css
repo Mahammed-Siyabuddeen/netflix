@@ -34,9 +34,10 @@
 }
 .row-post-img-container:hover{
     position: relative;
-    transform: scale(1.2);
-    right: 30px;
-    transform-origin: center
+    transform: scale(1.1);
+    right: 20px;
+    transform-origin: center;
+    cursor: pointer;
 }
 .row-post-img-contents{
     position: absolute;

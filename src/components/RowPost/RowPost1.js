@@ -25,6 +25,8 @@ function RowPost1(props) {
             <div className='posters'>
                 {
                     title === "Action" && movie.Action.map((obj, i) => {
+                        console.log("movie-obj :",obj);
+
                         return (
                             <div
                                 onClick={() => Navigate(`/${obj.id}`)}
@@ -49,6 +51,7 @@ function RowPost1(props) {
 
                 {
                     title === "Originals" && movie.Originals.map((obj, i) => {
+
                         return (
                             <div
                                 onClick={() => Navigate(`/${obj.id}`)}
@@ -59,7 +62,7 @@ function RowPost1(props) {
                                 <div className="row-post-img-contents"
                                     style={{ display: show === i ? 'block' : 'none' }}
                                 >
-                                    <h3 className='row-post-contents'>{obj.title}</h3>
+                                    <h3 className='row-post-contents'>{obj.title||obj.name}</h3>
                                     <p className='row-post-overview'>{obj.overview}</p>
                                 </div>
 
@@ -95,7 +98,6 @@ function RowPost1(props) {
                 }
 
             </div>
-            {/* { urlId &&   <YouTube opts={opts}  videoId={urlId.key} />} */}
         </div>
     )
 }
