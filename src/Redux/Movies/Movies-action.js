@@ -40,9 +40,9 @@ export const getmoviedata = (name) => {
       console.log(moviedata)
       dispatch({
         
-        type:name==action? MoviesActionType.SET_MOVIE_DATA:
-        name==popular? MoviesActionType.SET_MOVIE_DATA_POPULAR:
-        name==originals? MoviesActionType.SET_MOVIE_DATA_ORIGIN:
+        type:name===action? MoviesActionType.SET_MOVIE_DATA:
+        name===popular? MoviesActionType.SET_MOVIE_DATA_POPULAR:
+        name===originals? MoviesActionType.SET_MOVIE_DATA_ORIGIN:
         MoviesActionType.SET_MOVIE_DATA,
         payload: moviedata
       })

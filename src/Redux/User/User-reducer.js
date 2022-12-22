@@ -1,5 +1,4 @@
 import UserActionTypes from "./User-type"
-import {auth} from '../../Firebase/Config'
 const Initialstate={
     user:null,
 

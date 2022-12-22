@@ -1,7 +1,5 @@
-import { signInWithEmailAndPassword } from '@firebase/auth'
 import React, { useState } from 'react'
 import {  useNavigate } from 'react-router'
-import { auth } from '../../Firebase/Config'
 import Background from '../../images/Background.jpg'
 import NavBar from '../NavBar/NavBar'
 function Login() {
@@ -10,10 +8,10 @@ function Login() {
    const Navigate=useNavigate()
    var handlesubmit=async(e)=>{
        e.preventDefault()
-      const user=await signInWithEmailAndPassword(auth,email,password).then(()=>{
-          alert('successfully login')
-          Navigate('/')
-      })
+    //   const user=await signInWithEmailAndPassword(auth,email,password).then(()=>{
+    //       alert('successfully login')
+    //       Navigate('/')
+    //   })
    }
     return (
         <div>

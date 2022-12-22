@@ -20,7 +20,7 @@ function View() {
     const { credits, poster_path, title, overview, vote_average, backdrop_path } = found.movie.additionaldata
     const movieid = found.movie.additionaldata.id
     const playList = found.movie.playList
-    const paid = playList && playList.find((data) => data.movieid == id)
+    const paid = playList && playList.find((data) => data.movieid ===id)
     console.log(playList)
 
     useEffect( () => {
