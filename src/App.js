@@ -33,7 +33,7 @@ function App() {
     auth.onAuthStateChanged((user)=>{
       dispatch(setcurrentuser(user))
     })
-  },[user])
+  },[user,dispatch])
   return (
     <div>
       <BrowserRouter>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import {  useNavigate } from 'react-router-dom'
@@ -16,13 +16,9 @@ function Mylist() {
         })
 
     }, [Dispatch])
-    const [show, setshow] = useState(-1)
     const mylist = useSelector((state) => state.list.mylist)
     const Navigate = useNavigate()
 
-    // const removeitems=()=>{
-    //     removefromList(user.uid)
-    // }
     return (
         <div className='list-overview'>
             <h2 className="list-overview-title">My List</h2>
@@ -37,7 +33,7 @@ function Mylist() {
                              >
                                 <span><i style={{width:'100%',marginLeft:'40%'}} class="fas fa-times fa-2x"></i></span>
                             </div>
-                            <div onMouseEnter={() => setshow(i)} onMouseLeave={() => setshow(-1)}
+                            <div 
                                 onClick={() => Navigate(`/${item.data.movieid}`)}
                                 className="list-item">
 

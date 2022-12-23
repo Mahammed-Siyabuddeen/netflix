@@ -53,10 +53,10 @@ function Payment() {
     }
   }
   console.log('THE SECRET IS >>>>>',clientSecret)
-  const handlesubmit = async(event) => {
+  const handlesubmit = (event) => {
     event.preventDefault();
     setprocessing(true)
-    const payload=await stripe.confirmCardPayment(clientSecret,{
+    stripe.confirmCardPayment(clientSecret,{
       payment_method:{
         card:elements.getElement(CardElement)
       }
@@ -78,7 +78,6 @@ function Payment() {
     setdisabled(event.empty);
     seterror(event.error ? event.error.message : '')
   }
-  // CardElement.update({style: {base: {fontSize: '16px'}}})
   return (
     <div className='payment_container'>
       {/* <h1 style={{color:'white'}}>hello compount mount --- {location.state}</h1> */}
