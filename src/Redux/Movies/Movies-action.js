@@ -72,7 +72,7 @@ export const removemovieadditionaldata = () => {
   }
 }
 
-//***************PURCHASED MOVIE ACTIOS *************************/
+//***************PURCHASED MOVIE  *************************/
 
 export const addtoPlaymovie = (response) => {
   const { movieid, id, uid } = response
