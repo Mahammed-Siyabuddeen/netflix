@@ -6,7 +6,7 @@ function Signout(props) {
         <div>
              <div className="popup">
                  <div className="popup-inner">
-                    <button onClick={()=>props.settrigger(false)} className="close-popup-btn">close</button>
+                    <button onClick={()=>props.settrigger(false)} className="close-popup-btn">X</button>
                     {props.children}
                 </div>
            </div>

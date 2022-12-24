@@ -56,12 +56,14 @@ function Payment() {
   const handlesubmit = (event) => {
     event.preventDefault();
     setprocessing(true)
-    stripe.confirmCardPayment(clientSecret,{
+     stripe.confirmCardPayment(clientSecret,{
       payment_method:{
         card:elements.getElement(CardElement)
       }
       
-    }).then(({paymentIntent})=>{
+    }).then((data)=>{
+      console.log(data);
+      const {paymentIntent}=data
       console.log(paymentIntent);
      dispatch(addtoPlaymovie({movieid:location.state.movieid,id:paymentIntent.id,uid:user.user.uid}))
       setsucceeded(true)
@@ -78,6 +80,7 @@ function Payment() {
     setdisabled(event.empty);
     seterror(event.error ? event.error.message : '')
   }
+  // CardElement.update({style: {base: {fontSize: '16px'}}})
   return (
     <div className='payment_container'>
       {/* <h1 style={{color:'white'}}>hello compount mount --- {location.state}</h1> */}

@@ -16,9 +16,24 @@
     max-width: 640px;
     background-color: #ffff;
     border-radius: 12px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .close-popup-btn{
     position: absolute;
-    top: 16px;
+    top: 10px;
     right: 16px;
+    background-color: #111;
+    height: 40px;
+    color: #fff;
+    font-size: large;
+    width: 42px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: large;
+    font-family: unset;
+    font-weight: bold;
 }
