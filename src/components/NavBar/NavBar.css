@@ -95,6 +95,24 @@ nav ul li{
 .menu{
     display: none;
 }
+.signOut-content{
+    margin-left:auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+    font-size: x-large;
+}
+.signOut-content button{
+    background-color: #111;
+    height: 50px;
+    color: #fff;
+    font-size: large;
+    width: 120px;
+    border: none;
+    margin: 30px auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
 @media only screen and (max-width:800px){
     nav ul{
         position: absolute;

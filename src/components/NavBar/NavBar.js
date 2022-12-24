@@ -19,7 +19,7 @@ function NavBar() {
     useEffect(() => {
         if (window.innerWidth > 800)
             setshow(true)
-    }, [])
+    }, [username])
 
     var Logout = async () => {
         await signOut(auth).then(() => {
@@ -91,8 +91,10 @@ function NavBar() {
 
 
             <Signt trigger={popus} settrigger={setpopus}>
-                <h3>Dear,{username && username.displayName}  are you want SignOut</h3>
-                <button onClick={Logout}>SignOut</button>
+                <div className='signOut-content'>
+                    <h3>Dear,{username && username.displayName}  are you want SignOut</h3>
+                    <button onClick={Logout}>SignOut</button>
+                </div>
             </Signt>
             <i style={location.pathname === '/play' || location.pathname === '/payment' || window.innerWidth > 800 ? { display: 'none' } : { display: 'block' }}
                 onClick={handlecick} class="fas fa-bars fa-2x menu"></i>
